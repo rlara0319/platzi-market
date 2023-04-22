@@ -1,8 +1,9 @@
-package com.platzi.market.persistance.entity;
+package com.platzi.market.persistance;
 
 import com.platzi.market.domain.Product;
 import com.platzi.market.domain.repository.ProductRepository;
 import com.platzi.market.persistance.crud.ProductoCrudRepository;
+import com.platzi.market.persistance.entity.Producto;
 import com.platzi.market.persistance.mapper.ProductMapper;
 import java.util.List;
 import java.util.Optional;

@@ -1,75 +1,73 @@
 package com.platzi.market.persistance.entity;
 
-import javax.persistence.*;
 import java.util.List;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "clientes")
 public class Cliente {
 
-    @Id
-    private String id;
+  @Id private String id;
 
-    private String nombre;
+  private String nombre;
 
-    private String apellidos;
+  private String apellidos;
 
-    private Integer celular;
+  private String celular;
 
-    private String direccion;
+  private String direccion;
 
-    @Column(name = "correo_electronico")
-    private String correoElectronico;
+  @Column(name = "correo_electronico")
+  private String correoElectronico;
 
-    @OneToMany(mappedBy = "cliente")
-    private List<Compra> compras;
+  @OneToMany(mappedBy = "cliente")
+  private List<Compra> compras;
 
-    public String getId() {
-        return id;
-    }
+  public String getId() {
+    return id;
+  }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+  public void setId(String id) {
+    this.id = id;
+  }
 
-    public String getNombre() {
-        return nombre;
-    }
+  public String getNombre() {
+    return nombre;
+  }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
 
-    public String getApellidos() {
-        return apellidos;
-    }
+  public String getApellidos() {
+    return apellidos;
+  }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
-    }
+  public void setApellidos(String apellidos) {
+    this.apellidos = apellidos;
+  }
 
-    public Integer getCelular() {
-        return celular;
-    }
+  public String getCelular() {
+    return celular;
+  }
 
-    public void setCelular(Integer celular) {
-        this.celular = celular;
-    }
+  public void setCelular(String celular) {
+    this.celular = celular;
+  }
 
-    public String getDireccion() {
-        return direccion;
-    }
+  public String getDireccion() {
+    return direccion;
+  }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
+  public void setDireccion(String direccion) {
+    this.direccion = direccion;
+  }
 
-    public String getCorreoElectronico() {
-        return correoElectronico;
-    }
+  public String getCorreoElectronico() {
+    return correoElectronico;
+  }
 
-    public void setCorreoElectronico(String correoElectronico) {
-        this.correoElectronico = correoElectronico;
-    }
-
+  public void setCorreoElectronico(String correoElectronico) {
+    this.correoElectronico = correoElectronico;
+  }
 }
